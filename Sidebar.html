@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .navbar {
+      height: 100%;
+      width: 100%; /* Set a fixed width for the navbar */
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      padding-top: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      transition: width 0.3s;
+      overflow-x: hidden;
+    }
+    .navbar a {
+      padding: 15px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s, padding-left 0.3s;
+    }
+    .navbar a:hover {
+      background-color: #575757;
+      padding-left: 30px;
+    }
+    .navbar a .icon {
+      margin-right: 10px;
+    }
+    .navbar a .text {
+      flex: 1;
+    }
+    .navbar a .arrow {
+      transition: transform 0.3s;
+    }
+    .navbar a:hover .arrow {
+      transform: translateX(10px);
+    }
+    .footer {
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      background-color: #333;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+    @media screen and (max-width: 768px) {
+      .navbar a {
+        padding: 10px;
+        font-size: 16px;
+      }
+      .footer {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .navbar a {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" onclick="google.script.run.showDialogTemplate1();">
+      <span class="icon">📄</span>
+      <span class="text">Novo Documento (Template 1)</span>
+      <span class="arrow">➡️</span>
+    </a>
+    <a href="#" onclick="google.script.run.showDialogTemplate2();">
+      <span class="icon">📄</span>
+      <span class="text">Novo Documento (Template 2)</span>
+      <span class="arrow">➡️</span>
+    </a>
+    <!-- Adicione mais links conforme necessário -->
+  </div>
+  <div class="footer">
+    Equipe Beta Perpart v.1
+  </div>
+</body>
+</html>
